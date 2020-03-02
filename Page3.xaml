@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP3.Page3">
+    <ListView x:Name="Class1List" ItemsSource="{Binding Source={x:Reference Class1List},Path=BindingContext.Mylist}"
+              IsVisible="True">
+        <ListView.Header>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="add new" >
+
+                </Button>
+
+
+                <Button x:Name="delete" Text="delete" >
+
+                </Button>
+            </StackLayout>
+
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="delete item"  CommandParameter="{Binding .}"></MenuItem>
+                    </ViewCell.ContextActions>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding image}" HeightRequest="50"
+                          WidthRequest="50"></Image>
+                        <Label Text="{Binding fullname}"></Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
+
+   
+        

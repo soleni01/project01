@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="APP3.MainPage">
+
+    <StackLayout Margin="20">
+        
+        <Label Text="Welcome!" ></Label>   
+        
+
+        <Button  x:Name="loginbutton" Text="LOGIN" Clicked="Button_Clicked"/>
+
+        <Button  x:Name="REGISTER" Text="NEW TO THE APP? SIGN UP NOW" Clicked="Button_Clicked2"/>
+
+
+    </StackLayout> 
+    
+
+</ContentPage>
